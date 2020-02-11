@@ -53,7 +53,6 @@ ansible/
 ├── tasks
 │   └── main.yml
 └── .travis.yml
-
 ```
 
 ## Usage
