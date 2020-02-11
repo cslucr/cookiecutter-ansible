@@ -1,0 +1,8 @@
+---
+- name: Display Role Details.
+  debug:
+    msg:
+      - '===================================================================='
+      - '{{ cookiecutter.author }}.{{ cookiecutter.project }}'
+      - '{{ cookiecutter.description }}.'
+      - '===================================================================='

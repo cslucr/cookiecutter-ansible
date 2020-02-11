@@ -1,0 +1,8 @@
+{
+    "author": "cslucr",
+    "project": "ansible",
+    "description": "Ansible role to apply configuration.",
+    "_copy_without_render": [
+        "molecule/default/Dockerfile.j2"
+    ]
+}
