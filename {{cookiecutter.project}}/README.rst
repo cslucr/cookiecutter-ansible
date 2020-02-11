@@ -1,5 +1,5 @@
 
-ansible
+{{ cookiecutter.project }}
 *******
 
 .. image:: https://git.beta.ucr.ac.cr/{{ cookiecutter.author }}/{{ cookiecutter.project }}/badges/master/pipeline.svg
@@ -103,10 +103,7 @@ Usage
    ::
 
       cd {{ cookiecutter.project }}
-      chmod +x testme.sh
-      ./testme.sh
-
-   On some tests you may need to use *sudo* to succeed.
+      python3 -m molecule test
 
 
 Variables

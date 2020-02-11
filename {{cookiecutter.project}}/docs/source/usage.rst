@@ -46,8 +46,6 @@ Usage
  .. substitution-code-block:: bash
 
   cd |PROJECT|
-  chmod +x testme.sh
-  ./testme.sh
+  python3 -m molecule test
 
- On some tests you may need to use *sudo* to succeed.
 
