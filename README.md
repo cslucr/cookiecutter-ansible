@@ -30,6 +30,10 @@ ansible/
 │       └── class.mmd
 ├── docthis.sh
 ├── .gitignore
+├── .gitlab
+│   └── issue_templates
+│       ├── Bug.md
+│       └── Feature.md
 ├── .gitlab-ci.yml
 ├── img
 │   ├── author.png
