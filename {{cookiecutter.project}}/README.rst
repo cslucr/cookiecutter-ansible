@@ -1,5 +1,5 @@
 
-{{ cookiecutter.project }}
+ansible
 *******
 
 .. image:: https://git.beta.ucr.ac.cr/{{ cookiecutter.author }}/{{ cookiecutter.project }}/badges/master/pipeline.svg
@@ -34,7 +34,7 @@ Contents
 * `License <#License>`_
 * `Links <#Links>`_
 * `UML <#UML>`_
-   * `Deployment <#deployment>`_
+   * `Class <#class>`_
 * `Author <#Author>`_
 
 Description
@@ -195,18 +195,18 @@ UML
 
 
 Class
-==========
+=====
 
 The class structure is shown below:
 
-.. image:: https://gitlab.com/{{ cookiecutter.author }}/img/raw/master/{{ cookiecutter.project }}/class.png
+.. image:: https://git.beta.ucr.ac.cr/{{ cookiecutter.author }}/{{ cookiecutter.project }}/raw/master/img/class.png
    :alt: class
 
 
 Author
 ******
 
-.. image:: https://gitlab.com/{{ cookiecutter.author }}/img/raw/master/{{ cookiecutter.project }}/author.png
+.. image:: https://git.beta.ucr.ac.cr/{{ cookiecutter.author }}/{{ cookiecutter.project }}/raw/master/img/author.png
    :alt: author
 
 Comunidad de Software Libre de la Universidad de Costa Rica.

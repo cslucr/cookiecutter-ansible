@@ -28,8 +28,8 @@ html_theme = "sphinx_rtd_theme"
 
 master_doc = "index"
 
-img_base_url = "https://gitlab.com/" + author + "/img/raw/master/"
-img_url = img_base_url + project + "/"
+img_base_url = "https://git.beta.ucr.ac.cr/" + author + "/" + project + "/"
+img_url = img_base_url + "raw/master/img/"
 
 author_img = ".. image:: " + img_url + "author.png\n   :alt: author"
 author_slogan = "Comunidad de Software Libre de la Universidad de Costa Rica."
