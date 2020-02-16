@@ -10,6 +10,7 @@ matrix:
       dist: xenial
 
 before_install:
+  - sudo apt remove mysql-server-5.7
   - sudo apt purge ansible
   - sudo apt update
 
@@ -17,9 +18,13 @@ install:
   - sudo apt install -y python3-pip python3-setuptools
   - sudo python3 -m pip install --upgrade pip setuptools wheel
   - sudo python3 -m pip install ansible molecule[docker]
+  - ansible-galaxy install {{ cookiecutter.author }}.{{ cookiecutter.project }}
+
+before_script:
+  - chmod +x testme.sh
 
 script:
-  - python3 -m molecule test
+  - sudo ./testme.sh -i -t -x python3
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

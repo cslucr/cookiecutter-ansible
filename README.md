@@ -2,6 +2,20 @@
 
 [Cookiecutter](https://cookiecutter.rtfd.io) template to generate an Ansible role layout.
 
+## Usage
+
+Install *Cookiecutter*:
+
+```
+python3 -m pip install cookiecutter
+```
+
+Generate the project using *Cookiecutter*:
+
+```
+cookiecutter https://github.com/cslucr/cookiecutter-ansible.git
+```
+
 ## Layout
 
 This repository provides the following file tree layout:
@@ -57,20 +71,6 @@ ansible/
 ├── tasks
 │   └── main.yml
 └── .travis.yml
-```
-
-## Usage
-
-Install *Cookiecutter*:
-
-```
-python3 -m pip install cookiecutter
-```
-
-Generate the project using *Cookiecutter*:
-
-```
-cookiecutter https://github.com/cslucr/cookiecutter-ansible.git
 ```
 
 ## License

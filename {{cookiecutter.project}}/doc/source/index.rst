@@ -26,15 +26,15 @@ Contents
 
    usage
 
-   variables
+   variable
 
-   requirements
+   requirement
 
    compatibility
 
    license
 
-   links
+   link
 
    uml
 
