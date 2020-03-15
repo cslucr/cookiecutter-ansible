@@ -24,7 +24,7 @@ This repository provides the following file tree layout:
 ansible/
 ├── defaults
 │   └── main.yml
-├── docs
+├── doc
 │   ├── requirements.txt
 │   ├── source
 │   │   ├── author.rst
@@ -43,6 +43,9 @@ ansible/
 │   └── uml
 │       └── class.mmd
 ├── docthis.sh
+├── .github
+│   └── workflows
+│       └── github-ci.yml
 ├── .gitignore
 ├── .gitlab
 │   └── issue_templates
@@ -58,14 +61,8 @@ ansible/
 │   └── main.yml
 ├── molecule
 │   └── default
-│       ├── Dockerfile.j2
-│       ├── INSTALL.rst
-│       ├── molecule.yml
-│       ├── playbook.yml
-│       ├── prepare.yml
-│       ├── requirements.yml
-│       └── tests
-│           └── test_default.py
+│       ├── converge.yml
+│       └── molecule.yml
 ├── README.rst
 ├── .readthedocs.yml
 ├── tasks
