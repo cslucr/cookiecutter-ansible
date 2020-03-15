@@ -46,64 +46,57 @@ Ansible role to apply configuration.
 Usage
 *****
 
-* To install and execute:
+To install and execute:
 
-..
 
-   ::
+::
 
-      ansible-galaxy install {{ cookiecutter.author }}.{{ cookiecutter.project }}
-      ansible localhost -m include_role -a name={{ cookiecutter.author }}.{{ cookiecutter.project }} -K
+   ansible-galaxy install {{ cookiecutter.author }}.{{ cookiecutter.project }}
+   ansible localhost -m include_role -a name={{ cookiecutter.author }}.{{ cookiecutter.project }} -K
 
-* Passing variables:
+Passing variables:
 
-..
 
-   ::
+::
 
-      ansible localhost -m include_role -a name={{ cookiecutter.author }}.{{ cookiecutter.project }} -K \
-          -e "upgrade: false"
+   ansible localhost -m include_role -a name={{ cookiecutter.author }}.{{ cookiecutter.project }} -K \
+       -e "upgrade: false"
 
-* To include the role on a playbook:
+To include the role on a playbook:
 
-..
 
-   ::
+::
+   - hosts: servers
+     roles:
+         - {role: {{ cookiecutter.author }}.{{ cookiecutter.project }}}
 
-      - hosts: servers
-        roles:
-            - {role: {{ cookiecutter.author }}.{{ cookiecutter.project }}}
+To include the role as dependency on another role:
 
-* To include the role as dependency on another role:
 
-..
+::
 
-   ::
+   dependencies:
+     - role: {{ cookiecutter.author }}.{{ cookiecutter.project }}
+       upgrade: true
 
-      dependencies:
-        - role: {{ cookiecutter.author }}.{{ cookiecutter.project }}
-          upgrade: true
+To use the role from tasks:
 
-* To use the role from tasks:
 
-..
+::
 
-   ::
+   - name: Execute role task.
+     import_role:
+       name: {{ cookiecutter.author }}.{{ cookiecutter.project }}
+     vars:
+       upgrade: true
 
-      - name: Execute role task.
-        import_role:
-          name: {{ cookiecutter.author }}.{{ cookiecutter.project }}
-        vars:
-          upgrade: true
+To run tests:
 
-* To run tests:
 
-..
+::
 
-   ::
-
-      cd {{ cookiecutter.project }}
-      python3 -m molecule test
+   cd {{ cookiecutter.project }}
+   ./testme.sh
 
 
 Variables
@@ -182,9 +175,15 @@ Links
 
 `Github <https://github.com/{{ cookiecutter.author }}/{{ cookiecutter.project }}>`_.
 
+`Github CI <https://github.com/{{ cookiecutter.author }}/{{ cookiecutter.project }}/actions>`_.
+
 `Gitlab <https://git.beta.ucr.ac.cr/{{ cookiecutter.author }}/{{ cookiecutter.project }}>`_.
 
+`Gitlab CI <https://git.beta.ucr.ac.cr/{{ cookiecutter.author }}/{{ cookiecutter.project }}/pipelines>`_.
+
 `Readthedocs <https://{{ cookiecutter.project }}.readthedocs.io>`_.
+
+`Travis CI <https://travis-ci.com/{{ cookiecutter.author }}/{{ cookiecutter.project }}>`_.
 
 
 UML

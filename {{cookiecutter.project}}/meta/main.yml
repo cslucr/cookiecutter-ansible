@@ -23,6 +23,3 @@ galaxy_info:
     - devops
     - open
     - ucr
-
-dependencies:
-  - role: {{ cookiecutter.author }}.{{ cookiecutter.project }}

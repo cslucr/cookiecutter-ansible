@@ -14,7 +14,6 @@ sys.path.insert(0, os.path.abspath("../.."))
 extensions = [
     "sphinxcontrib.restbuilder",
     "sphinxcontrib.globalsubs",
-    "sphinx-prompt",
     "sphinx_substitution_extensions"
 ]
 
@@ -36,6 +35,9 @@ author_slogan = "Comunidad de Software Libre de la Universidad de Costa Rica."
 
 github_base_url = "https://github.com/"
 github_url = github_base_url + author + "/" + project
+github_badge = github_url + "workflows/CI/badge.svg\n   :alt: github_ci"
+github_ci_url = github_url + "/actions"
+github_ci_link = "`Github CI <" + github_ci_url + ">`_."
 github_link = "`Github <" + github_url + ">`_."
 
 gitlab_base_url = "https://git.beta.ucr.ac.cr/"
@@ -61,10 +63,12 @@ global_substitutions = {
     "AVATAR_IMG": ".. image:: " + img_url + "avatar.png\n   :alt: avatar",
     "DEFAULT_VAR_NAME": 'upgrade',
     "CLASS_IMG": ".. image:: " + img_url + "/class.png\n   :alt: class",
-    "GITLAB_BADGE":  ".. image:: " + gitlab_badge,
-    "GITLAB_CI_LINK":  gitlab_ci_link,
-    "GITHUB_LINK":  github_link,
-    "GITLAB_LINK":  gitlab_link,
+    "GITHUB_BADGE": ".. image:: " + github_badge,
+    "GITHUB_CI_LINK": github_ci_link,
+    "GITHUB_LINK": github_link,
+    "GITLAB_BADGE": ".. image:: " + gitlab_badge,
+    "GITLAB_CI_LINK": gitlab_ci_link,
+    "GITLAB_LINK": gitlab_link,
     "PROJECT": project,
     "READTHEDOCS_BADGE": ".. image:: https://rtfd.io" + readthedocs_badge,
     "READTHEDOCS_LINK": readthedocs_link,

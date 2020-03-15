@@ -3,18 +3,11 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint:
-  name: yamllint
+lint: flake8
 platforms:
   - name: bionic
-    image: ubuntu:18
-  - name: buster
-    image: debian:10
+    image: ubuntu:18.04
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
-verifier:
-  name: testinfra
-  lint:
-    name: flake8
+  playbooks:
+    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
